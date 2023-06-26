@@ -13,8 +13,9 @@ export default function Homepage() {
 	}, [textAreaValue])
 
 	function countWords(text: string) {
-		const nWords = text?.trim().replace(/\s+/g, ' ').split(' ').length || 0
-		console.log(text)
+		const nWords = text
+			? text?.trim().replace(/\s+/g, ' ').split(' ').length
+			: 0
 		setWordCount(nWords)
 	}
 
