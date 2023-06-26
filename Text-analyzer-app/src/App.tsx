@@ -1,4 +1,4 @@
-import { GeistProvider, CssBaseline } from '@geist-ui/core'
+import { GeistProvider, CssBaseline, useMediaQuery } from '@geist-ui/core'
 import Homepage from './components/Homepage'
 import 'inter-ui/inter.css'
 
