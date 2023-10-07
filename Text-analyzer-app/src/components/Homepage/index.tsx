@@ -1,5 +1,5 @@
+import { ChangeEvent, useEffect, useState } from 'react'
 import { Grid, Page, Text, Textarea, useMediaQuery } from '@geist-ui/core'
-import { useState, useEffect } from 'react'
 
 export default function Homepage() {
 	const [textAreaValue, setTextAreaValue] = useState<string>('')
@@ -48,12 +48,14 @@ export default function Homepage() {
 				<Grid.Container xs={24} sm md={12} gap={1} h="max-content" ml="0">
 					<Grid xs={24} md={12}>
 						<Text p width="100%" margin={0}>
-							{wordCount} words
+							{wordCount === 1 ? `${wordCount} word` : `${wordCount} words`}
 						</Text>
 					</Grid>
 					<Grid xs={24} md={12}>
 						<Text p width="100%" margin={0}>
-							{charactersCount} characters
+							{charactersCount === 1
+								? `${charactersCount} character`
+								: `${charactersCount} characters`}
 						</Text>
 					</Grid>
 				</Grid.Container>
